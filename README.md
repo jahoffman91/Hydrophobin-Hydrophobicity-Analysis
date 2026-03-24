@@ -15,6 +15,12 @@ Different hydrophobicity scales assign different values to amino acids depending
 
 The file `hydrophobicity_distribution.html` is an interactive boxplot showing the normalized hydrophobicity score distribution for each amino acid across all 23 scales, ordered by median hydrophobicity.
 
+## Example: HFBI Hydrophobicity Profile
+
+[**View the HFBI hydrophobicity profile**](https://jahoffman91.github.io/Hydrophobin-Hydrophobicity-Analysis/hydrophobicity_analysis_HFBI.html)
+
+Per-residue hydrophobicity profile of the class II hydrophobin HFBI, generated using `Analyze_Hydrophobicity.py`.
+
 ## Scripts
 
 ### `Scrape_hydrophobicity_data.py`
