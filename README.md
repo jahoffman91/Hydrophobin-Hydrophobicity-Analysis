@@ -11,6 +11,8 @@ Different hydrophobicity scales assign different values to amino acids depending
 
 ## Hydrophobicity Distribution
 
+[**View the interactive chart**](https://jahoffman91.github.io/Hydrophobin-Hydrophobicity-Analysis/hydrophobicity_distribution.html)
+
 The file `hydrophobicity_distribution.html` is an interactive boxplot showing the normalized hydrophobicity score distribution for each amino acid across all 23 scales, ordered by median hydrophobicity.
 
 ## Scripts
