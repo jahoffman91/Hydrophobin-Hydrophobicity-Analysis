@@ -1,10 +1,11 @@
 .DS_Store
 __pycache__/
 *.pyc
-
-# Analysis outputs (project-specific)
-hydrophobicity_analysis_*.csv
-hydrophobicity_analysis_*.html
-hydrophobicity_analysis_*.png
-Pymol_alignments/
+*.py
+*.csv
 *.fasta
+*.png
+requirements.txt
+Pymol_alignments/
+hydrophobicity_analysis_*_solid.html
+hydrophobicity_analysis_SC3*.html
