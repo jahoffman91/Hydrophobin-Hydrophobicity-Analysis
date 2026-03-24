@@ -184,18 +184,20 @@ def plot_hydrophobicity_profile(df_results, title="Hydrophobicity Profile", aa_p
                         showlegend=False  # Don't show in legend
                     )
         
-        # Update hover text to include signal sequence information
         hover_text = []
         for pos, aa, mean_h in zip(row_positions, row_aa, row_mean):
-            is_signal = "YES" if (pos-1) in (signal_sequence_positions or []) else "NO"
-            is_uppercase = "YES" if (pos-1) in (uppercase_positions or []) else "NO"
-            hover_text.append(
+            text = (
                 f"Position: {pos}<br>"
                 f"Amino Acid: {aa}<br>"
-                f"Signal Sequence: {is_signal}<br>"
-                f"Uppercase Codon: {is_uppercase}<br>"
-                f"Hydrophobicity: {mean_h:.2f}"
             )
+            if signal_sequence_positions:
+                is_signal = "YES" if (pos-1) in signal_sequence_positions else "NO"
+                text += f"Signal Sequence: {is_signal}<br>"
+            if uppercase_positions:
+                is_uppercase = "YES" if (pos-1) in uppercase_positions else "NO"
+                text += f"Uppercase Codon: {is_uppercase}<br>"
+            text += f"Hydrophobicity: {mean_h:.2f}"
+            hover_text.append(text)
         
         # Add mean hydrophobicity points with color based on uppercase status
         marker_colors = ['red' if (pos-1) in (uppercase_positions or []) else 'blue' 
